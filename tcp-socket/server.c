@@ -22,7 +22,7 @@ int  main()
     serv_addr.sin_addr.s_addr = INADDR_ANY; // server can accept connections from any IP address
     serv_addr.sin_port = htons(8080); // sets port no to 8080. htons() converts port into network byte order
 
-    if (bind(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) > 0) // bind socket, ip address, port number
+    if (bind(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) // bind socket, ip address, port number
     {
         perror("bind error");
         exit(1);

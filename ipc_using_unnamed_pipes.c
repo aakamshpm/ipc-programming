@@ -1,3 +1,5 @@
+// Demonstration of inter process communication using unnamed pipes (half duplex).
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
